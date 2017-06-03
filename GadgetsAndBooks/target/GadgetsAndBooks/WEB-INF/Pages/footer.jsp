@@ -16,7 +16,7 @@
 	<body>
 	
 	<br><br><br><br><br>
-	<nav class="navbar navbar-light" style="background-color:#F0B27A;">
+	<nav class="navbar navbar-light" style="background-color:#F5CBA7   ;">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<a class="navbar-brand">

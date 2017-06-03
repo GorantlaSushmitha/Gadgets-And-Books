@@ -34,4 +34,4 @@
 <h1>Your Cart is empty!!!</h1>
 <a href="<c:url value="/all/product/getallproducts"></c:url>">SHOP NOW</a>
 </body>
-</html>
+</html>	

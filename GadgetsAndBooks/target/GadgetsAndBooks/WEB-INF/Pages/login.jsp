@@ -22,4 +22,5 @@ ${registrationSuccess }
 <input type="submit" value="submit">
 </form>
 </body>
+<%@ include file="footer.jsp" %>
 </html>

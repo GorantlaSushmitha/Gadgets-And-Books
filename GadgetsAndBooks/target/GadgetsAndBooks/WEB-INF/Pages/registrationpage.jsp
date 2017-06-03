@@ -22,7 +22,7 @@
 <form:errors path="id" cssStyle="color:red"></form:errors>
 </div>
 </tr>
-
+<center><h3>Registration Form</h3></center>
 <tr>
 <div class="form-group">
 <td><label for="firstname">Enter first name</label></td>
@@ -79,11 +79,12 @@
 <br>
 
 <table align="center" >
+
 <tr>
 <div class="form-group">
-<td><label for="billingAddress.streetname">Enter Streetname</label></td>
-<td><form:input path="billingAddress.streetname"></form:input></td>
-<form:errors path="billingAddress.streetname" cssStyle="color:red"></form:errors>
+<td><label for="billingAddress.streetName">Enter Street name</label></td>
+<td><form:input path="billingAddress.streetName"></form:input></td>
+<form:errors path="billingAddress.streetName" cssStyle="color:red"></form:errors>
 </div>
 </tr>
 <tr>
@@ -118,18 +119,19 @@
 </table>
 <br>
 <table align="center" >
+
 <tr>
 <div class="form-group">
-<td><label for="shippingAddress.streetname">Enter Streetname</label></td>
-<td><form:input path="shippingAddress.streetname"></form:input></td>
-<form:errors path="shippingAddress.streetname" cssStyle="color:red"></form:errors>
+<td><label for="shippingAddress.streetname">Enter Street name</label></td>
+<td><form:input path="shippingAddress.streetName"></form:input></td>
+<form:errors path="shippingAddress.streetName" cssStyle="color:red"></form:errors>
 </div>
 </tr>
 <tr>
 <div class="form-group">
-<td><label for="shippingAddress.apartmentnumber">Enter Apartment number</label></td>
-<td><form:input path="shippingAddress.apartmentnumber"></form:input></td>
-<form:errors path="shippingAddress.apartmentnumber" cssStyle="color:red"></form:errors>
+<td><label for="shippingAddress.apartmentNumber">Enter Apartment number</label></td>
+<td><form:input path="shippingAddress.apartmentNumber"></form:input></td>
+<form:errors path="shippingAddress.apartmentNumber" cssStyle="color:red"></form:errors>
 </div>
 </tr>
 <tr>
@@ -154,7 +156,7 @@
 </div>
 </tr>
 </table>
-<input type="submit" value="Register">
+<center><input type="submit" value="Register"></center>
 
 </form:form></div>
 

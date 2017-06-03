@@ -28,7 +28,7 @@
             	</ol>
             	<div class="carousel-inner" role="listbox" style="height: 250px;">
             		<div class="item active">
-                    	<img class="first-slide home-image" src="resources/images/1.png" alt="first slide" >
+                    	<img class="first-slide home-image" src="resources/images/c1.png" alt="first slide" >
                     	<div class="container">
                         	<div class="carousel-caption">
                             	<h1>ONLINE BOOKS And GADGETS STORE</h1>

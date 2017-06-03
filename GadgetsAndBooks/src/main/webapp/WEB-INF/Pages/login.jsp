@@ -8,10 +8,15 @@ pageEncoding="ISO-8859-1"%>
 <title>Insert title here</title>
 </head>
 <body>
-ENTER USERNAME AND PASSWORD <br>
+<table align="center">
+<tr>
+<th>ENTER USERNAME AND PASSWORD</th> <br>
+</tr>
+<tr>
 ${error }
 ${logout }
 ${registrationSuccess }
+</tr>
 <form action="<c:url value="j_spring_security_check"></c:url>" method="post" >
 <tr>
 <td>Enter username <input type="text" name="j_username"><br></td>
@@ -19,7 +24,21 @@ ${registrationSuccess }
 <tr>
 <td>Enter password <input type="password" name="j_password"><br></td>
 </tr>
-<input type="submit" value="submit">
+<tr>
+<td><input type="submit" value="submit"></td>
+</tr>
 </form>
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 </body>
+<%@ include file="footer.jsp" %>
 </html>

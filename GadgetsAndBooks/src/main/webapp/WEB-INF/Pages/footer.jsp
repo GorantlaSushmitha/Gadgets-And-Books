@@ -15,13 +15,13 @@
 	</head>
 	<body>
 	
-	<br><br><br><br><br>
-	<nav class="navbar navbar-light" style="background-color:#F0B27A;">
+	<br><br><br><br>
+	<nav class="navbar navbar-light" style="background-color:#F5CBA7   ;">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand">
-						<li style="color: blue;"><span class="glyphicon glyphicon-copyright-mark"> 2017 Books & Gadgets</span></li>
-					</a>
+					<ul class="navbar-brand">
+						<li style="color: blue;"><span class="glyphicon glyphicon-copyright-mark"> 2017 Books&Gadgets</span></li>
+					</ul>
 				</div>
 				<ul class="nav navbar-brand navbar-right">
 					<li style="color: blue;">bgcollections@outlet.co.in</li>

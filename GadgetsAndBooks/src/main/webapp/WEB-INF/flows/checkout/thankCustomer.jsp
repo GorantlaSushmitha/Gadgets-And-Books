@@ -10,7 +10,7 @@
    body{
        margin-top:20%;
     }
-    h1{
+/*     h1{
       text-transform:uppercase;
        font-weight:bold;
        font-size:35px;
@@ -26,7 +26,7 @@
       font-size:28px;
         text-decoration:none;
         color:red;
-    }
+    } */
 </style>
 </head>
 <body>

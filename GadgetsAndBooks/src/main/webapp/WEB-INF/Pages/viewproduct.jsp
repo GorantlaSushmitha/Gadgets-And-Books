@@ -14,20 +14,46 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 
 </head>
-<body ng-app="app" ng-controller="ProductController">
-PRODUCT NAME:   ${product.name }         <br>
-PRICE       :   ${product.price }         <br>
-MANUFACTURER:   ${product.manufacturer }         <br>
-DESCRIPTION :	${product.description }		<Br>
+<body ng-app="app" ng-controller="ProductController" style="background-color: silver;">
 
+<table align="center">
+<tr><center><h3><i>Product Details</i></h3></center></tr>
+<tr>
+<th>PRODUCT NAME: </th><td>  ${product.name }        </td> <br>
+</tr>
+<tr>
+<th>PRICE       :</th><td>   ${product.price }      </td>   <br>
+</tr>
+<tr>
+<th>MANUFACTURER: </th><td>  ${product.manufacturer }      </td>   <br>
+</tr>
+<tr>
+<th>DESCRIPTION :</th><td>	${product.description }	</td>	<Br>
+</tr>
+<tr>
 <url:url value="/all/product/productlist" var="url"></url:url>
-<a href="${url }">Browse All Products</a>
+<td align="center"><a href="${url }">Browse All Products</a></td>
+</tr>
+<tr>
 <sec:authorize access="hasRole('ROLE_USER')">
-<li id="csym"><button href="#" ng-click="addToCart(${product.id })">Add to cart</button></li>
+<td align="center"><li id="csym"><button href="#" ng-click="addToCart(${product.id })">Add to cart</button></li></td>
 </sec:authorize>
+</tr>
+</table>
 </body>
-<%@include file="footer.jsp" %>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <c:url var="script6" value="/resources/js/controller.js"></c:url>
-<script src="${script6}"></script> 
+<script src="${script6}"></script>
 
 </html>
+<%@include file="footer.jsp" %>

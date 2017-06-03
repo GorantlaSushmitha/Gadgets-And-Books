@@ -71,10 +71,9 @@
 						<div class="form-group">					
 					    <td><label for="Category">Category</label><td>	
 							<form:select  path="category.cId"	required="true">
-								<c:forEach items="${categoryList}" var="category">
-									<form:option path="category.cid" value="${category.cId}"/>${category.categoryName}
+									<c:forEach items="${categoryList}" var="category">
+									<form:option path="category.cid" value="${category.cId}"> ${category.categoryName}</form:option>
 								</c:forEach>
-					
 							</form:select>
 						
 							<%-- <select>
@@ -88,12 +87,23 @@
 							<td>
 							
 							
-						</div>							
+						</div>		
+					<%-- 	<tr>
+				<div class ="form-group">
+				 <td><label for="Category">Category</label></td>
+				<td><select>
+			     <c:forEach items="${categoryList}" var="category">
+				<option  path="category.cid" value="${category.cId}"/>${category.categoryName}
+				 </c:forEach>
+				</select>
+				</td>
+							
+				</div> --%>					
 					</tr>
 					<tr>
 						<div class="form-group">
 							<td><label for="image">Upload Image</label></td>
-							<td><input type="file" name="image" ></td>
+							<td><input type="file" name="fileUpload" ></td>
 						</div>
 					</tr>
 					<tr>

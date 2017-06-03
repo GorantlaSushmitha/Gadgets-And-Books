@@ -6,7 +6,6 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.niit.model.Product;
 
@@ -18,7 +17,7 @@ public class ProductDaoImpl implements ProductDao
 	private SessionFactory sessionFactory;
 	
 	
-	public void saveOrUpdateProduct(Product product) 
+	public Product saveOrUpdateProduct(Product product) 
 	{
 		Session session=sessionFactory.openSession();
 		System.out.println("PRODUCT ID BEFORE INSERTION " + product.getId());
@@ -26,6 +25,7 @@ public class ProductDaoImpl implements ProductDao
 		System.out.println("PRODUCT ID AFTER INSERTION " + product.getId());
 		session.flush();
 		session.close();
+		return product;
 	}
 	public List<Product> getAllProducts() 
 	{
@@ -51,4 +51,10 @@ public class ProductDaoImpl implements ProductDao
 		session.flush();
 		session.close();
 	}
+	  public byte[] loadImage(int id){
+		   Session session = sessionFactory.openSession();
+		   Product product = (Product)session.get(Product.class, id);
+		   byte[] b = product.getPicture();
+		   return b;
+	   }
 }

@@ -14,7 +14,7 @@
 		 http://www.springframework.org/schema/webflow-config http://www.springframework.org/schema/webflow-config/spring-webflow-config-2.3.xsd">
  <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 <property name="driverClassName" value="org.h2.Driver"></property>
-<property name="url" value=" jdbc:h2:tcp://localhost/~/test"></property>
+<property name="url" value="jdbc:h2:tcp://localhost/~/test"></property>
 <property name="username" value="sa"></property>
 <property name="password" value=""></property>
 </bean>

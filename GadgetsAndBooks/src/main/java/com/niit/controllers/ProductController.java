@@ -6,6 +6,9 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -16,8 +19,11 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.niit.model.Category;
@@ -52,36 +58,33 @@ public class ProductController
 	}	
 	*/
 /*	=======================saving product Object=====================================*/
-	@RequestMapping("admin/product/saveproduct")
-	public String saveOrUpdateProduct(@Valid @ModelAttribute(name="product") Product product,BindingResult result,RedirectAttributes attributes)
-	{
-		if(result.hasErrors())
-		{
-			System.out.println("HAS ERRORS");
-			return "productform";
-		}
-		System.out.println("After validation");
-		productService.saveOrUpdateProduct(product);
-		MultipartFile image=product.getImage();
-		if(image!=null && !image.isEmpty())
-		{
-			Path path=Paths.get("D:/DevOpps/programs/Gadgets & Books/src/main/webapp/WEB-INF/resources/images/"+product.getId()+".png");
-			try 
-			{
-				image.transferTo(new File(path.toString()));
-			} 
-			catch (IllegalStateException e) 
-			{
-				e.printStackTrace();
-			} 
-			catch (IOException e) 
-			{
-				e.printStackTrace();
-			}
-		}
+	@RequestMapping(value="admin/product/saveproduct",method = RequestMethod.POST)
+	public String saveOrUpdateProduct(@Valid @ModelAttribute(value="product") Product product,BindingResult result,Model model,HttpServletRequest request,@RequestParam CommonsMultipartFile[] fileUpload){
+		  if(result.hasErrors()){
+			  model.addAttribute("categories",categoryService.getAllCategorys());
+			  return "productform";
+		  }
+		  System.out.println("Saving file: ");
+		  
+		  for (CommonsMultipartFile aFile : fileUpload){
+	          
+	          System.out.println("Saving file: " + aFile.getOriginalFilename());
+	           product.setPicture(aFile.getBytes());
+		  
+		  }
+
+			Product produp = productService.saveOrUpdateProduct(product);
 		return "redirect:/all/product/productlist";
 	}
 	
+	  @RequestMapping("/all/product/image/{id}")
+	  public void imageprocess(@PathVariable int id,HttpServletRequest request,HttpServletResponse response) throws IOException{
+		  byte[] image = productService.loadImage(id);
+		  response.setContentType("image/png");
+		  ServletOutputStream outputStream = response.getOutputStream();
+		  outputStream.write(image);
+		  outputStream.close();
+	  }
 	
 	/*	=======================Listing product Object=====================================*/
 	
@@ -139,4 +142,10 @@ public class ProductController
 		return "productlist";
 	}
 
+	@RequestMapping("/all/product/getproobj")
+	  public @ResponseBody List<Product> getproobj(){
+		  List<Product> products = productService.getAllProducts();
+		  System.out.println("-------------------hello------------------");
+		  return products;
+	  }
 }

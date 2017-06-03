@@ -10,6 +10,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div class="container-fluid">
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+<img class="first-slide home-image" src="resources/images/register.png">
 <div class="container wrapper">
 <div class="container">
 <url:url value="/all/register" var="url"></url:url>
@@ -79,6 +83,7 @@
 <br>
 
 <table align="center" >
+
 <tr>
 <div class="form-group">
 <td><label for="billingAddress.streetName">Enter Street name</label></td>
@@ -118,6 +123,7 @@
 </table>
 <br>
 <table align="center" >
+
 <tr>
 <div class="form-group">
 <td><label for="shippingAddress.streetname">Enter Street name</label></td>
@@ -159,5 +165,8 @@
 </form:form></div>
 
 </div>
+</div>
+</div>
 </body>
+<%@ include file="footer.jsp" %>
 </html>

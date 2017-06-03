@@ -36,7 +36,7 @@
         			<span class="icon-bar"></span>
       			</button>
 				<div class="navbar-header">
-					<a class="navbar-brand" href="#">Sports Store</a>
+					<a class="navbar-brand" href="#">Gadgets And Books</a>
 				</div>
 				<div class="collapse navbar-collapse" id="collapse-example">
 					<ul class="nav navbar-nav">
@@ -48,6 +48,13 @@
   <url:url value="/admin/product/productform" var="url"></url:url>
    <li><a href="${url }">Add New Product</a></li>
   </security:authorize>
+  
+  <security:authorize access="hasRole('ROLE_ADMIN')">
+  <url:url value="/admin/category/categoryform" var="url"></url:url>
+   <li><a href="${url }">Add New Category</a></li>
+  </security:authorize>
+  
+  
 						<url:url value="/all/product/productlist" var="url"></url:url>
 						<li><a href="${url }">All Product</a></li>
  						<li class="dropdown">

@@ -13,9 +13,9 @@ public class ProductServiceImpl implements ProductService
 	private ProductDao productDao;
 	
 	
-	public void saveOrUpdateProduct(Product product) 
+	public Product saveOrUpdateProduct(Product product) 
 	{
-		productDao.saveOrUpdateProduct(product);	
+		return productDao.saveOrUpdateProduct(product);	
 	}
 	public List<Product> getAllProducts() 
 	{
@@ -29,4 +29,8 @@ public class ProductServiceImpl implements ProductService
 	{
 		productDao.deleteProduct(id);
 	}
+	public byte[] loadImage(int id)
+	{
+		 return productDao.loadImage(id);
+		}
 }
