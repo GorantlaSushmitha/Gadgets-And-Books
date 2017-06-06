@@ -35,3 +35,4 @@
 <a href="<c:url value="/all/product/getallproducts"></c:url>">SHOP NOW</a>
 </body>
 </html>	
+<%@ include file="/WEB-INF/Pages/footer.jsp" %>

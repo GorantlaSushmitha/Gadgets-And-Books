@@ -14,10 +14,9 @@
 		<title>Footer</title>
 	</head>
 	<body>
-	
-	<br><br><br><br>
-	<nav class="navbar navbar-light" style="background-color:#F5CBA7   ;">
-			<div class="container-fluid">
+<!-- 	<br><br><br><br><br> -->
+	<nav class="navbar navbar-light" style="background-color:#fff8dc; ">
+		<!-- 	<div class="container-fluid"> -->
 				<div class="navbar-header">
 					<ul class="navbar-brand">
 						<li style="color: blue;"><span class="glyphicon glyphicon-copyright-mark"> 2017 Books&Gadgets</span></li>
@@ -26,7 +25,7 @@
 				<ul class="nav navbar-brand navbar-right">
 					<li style="color: blue;">bgcollections@outlet.co.in</li>
 				</ul>
-			</div>
-		</nav>			
+<!-- 			</div> -->
+		</nav>		
 	</body>
 </html>

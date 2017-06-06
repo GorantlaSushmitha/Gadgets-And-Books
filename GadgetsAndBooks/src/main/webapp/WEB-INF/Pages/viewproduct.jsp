@@ -7,6 +7,14 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ include file="header.jsp" %>
+<style>
+ body {
+        background-color: #444;
+        background: url(http://www.designbolts.com/wp-content/uploads/2013/02/Rough-Grey-Tilable-Pattern-For-Website-Background.jpg);
+        
+    }
+}
+</style>
 <html >
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -14,22 +22,33 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 
 </head>
-<body ng-app="app" ng-controller="ProductController" style="background-color: silver;">
+<body ng-app="app" ng-controller="ProductController">
 
-<table align="center">
+
 <tr><center><h3><i>Product Details</i></h3></center></tr>
 <tr>
-<th>PRODUCT NAME: </th><td>  ${product.name }        </td> <br>
+
+ <center>
+       <url:url value="/resources/images/${product.id }.png" var="url3"></url:url>
+<td><img src="${url3 }" height="200" width="200" ></td>
+</center>
+       </tr>
+<table align="center">
+
+<tr>
+<th><i>PRODUCT NAME: </i></th><td>  ${product.name }        </td> <br>
 </tr>
 <tr>
-<th>PRICE       :</th><td>   ${product.price }      </td>   <br>
+<th><i>PRICE       :</i></th><td>   ${product.price }      </td>   <br>
 </tr>
 <tr>
-<th>MANUFACTURER: </th><td>  ${product.manufacturer }      </td>   <br>
+<th><i>MANUFACTURER:</i> </th><td>  ${product.manufacturer }      </td>   <br>
 </tr>
 <tr>
-<th>DESCRIPTION :</th><td>	${product.description }	</td>	<Br>
+<th><i>DESCRIPTION :</i></th><td>	${product.description }	</td>	<Br>
 </tr>
+
+   
 <tr>
 <url:url value="/all/product/productlist" var="url"></url:url>
 <td align="center"><a href="${url }">Browse All Products</a></td>
@@ -40,20 +59,13 @@
 </sec:authorize>
 </tr>
 </table>
+<br>
+<br>
+<br>
+<br>
 </body>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 <c:url var="script6" value="/resources/js/controller.js"></c:url>
 <script src="${script6}"></script>
-
 </html>
 <%@include file="footer.jsp" %>

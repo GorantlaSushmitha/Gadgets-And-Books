@@ -26,8 +26,8 @@
 		<title>Navigationbar</title>
 	</head>
 	<body>
-		<nav class="navbar navbar-light" style="background-color:#F5CBA7   ;">
-		<img style="width: 75px;height: 50px;border: 0;margin-top: 10px;float: left;" src="<c:url value="/resources/images/logo.png"></c:url>">
+		<nav class="navbar navbar-light" style="background-color:#fff8dc ;">
+		<img style="width: 75px;height: 50px;border: 0;margin-top: 10px;float: left;" src="<c:url value="/resources/images/lo.png"></c:url>">
 			<div class="container-fluid">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-example" aria-expanded="false">
         			<span class="sr-only">Toggle navigation</span>
@@ -57,14 +57,14 @@
   
 						<url:url value="/all/product/productlist" var="url"></url:url>
 						<li><a href="${url }">All Product</a></li>
- 						<li class="dropdown">
+ 						<%-- <li class="dropdown">
 							<a href="" class="dropdown-toggle" data-toggle="dropdown">Select by Category<b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<c:forEach var="c" items="${categories }">
 									<li><a href="<c:url value="/all/product/productsByCategory?searchCondition=${c.categoryName }"></c:url>" >${c.categoryName }</a></li>
 								</c:forEach>
 							</ul>
-						</li>
+						</li> --%>
 						
 						 <c:if test="${pageContext.request.userPrincipal.name!=null }">
 						  </c:if>
@@ -75,13 +75,13 @@
     <li><a href="${cart }" ><span class="on">Cart</span></a></li>
     
     </security:authorize>
-    
+    	
     
     
     <!-- when user not logged in -->
     <c:if test="${pageContext.request.userPrincipal.name==null }">
      <c:url var="cart" value="/beforeCart/getBeforeLogin"></c:url>
-    <li><a href="${cart }"><span class="on" >Cart <span id="show"></span></span></a></li></c:if>
+   </c:if>
 						
 						<c:if test="${pageContext.request.userPrincipal.name!=null }">			
  							<li><a href="">Welcome ${pageContext.request.userPrincipal.name }</a></li>

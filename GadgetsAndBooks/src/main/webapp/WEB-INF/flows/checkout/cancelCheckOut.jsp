@@ -37,3 +37,4 @@
     <a href="<c:url value="/cart/getCartId"></c:url>">Visit the Cart</h1>
 </body>
 </html>
+<%@ include file="/WEB-INF/Pages/footer.jsp" %>

@@ -6,6 +6,14 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ include file="/WEB-INF/Pages/header.jsp" %>
+<style>
+ body {
+        background-color: #444;
+        background: url(http://www.designbolts.com/wp-content/uploads/2013/02/Rough-Grey-Tilable-Pattern-For-Website-Background.jpg);
+        
+    }
+}
+</style>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -115,7 +123,7 @@ ${order.cart.customer.billingAddress.country}, ${order.cart.customer.billingAddr
 </div>
 </body>
 </html>
-
+<%@ include file="/WEB-INF/Pages/footer.jsp" %>
 <%-- <jsp:useBean id="now" class="java.util.Date" />
 <div class="container-wrapper">
 <div class="container">

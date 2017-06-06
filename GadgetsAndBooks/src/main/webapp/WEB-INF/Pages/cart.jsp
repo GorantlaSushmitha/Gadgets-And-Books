@@ -5,14 +5,24 @@
 <%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <%@ include file="header.jsp" %>
+<style>
+ body {
+        background-color: #444;
+        background: url(http://www.designbolts.com/wp-content/uploads/2013/02/Rough-Grey-Tilable-Pattern-For-Website-Background.jpg);
+        
+    }
+.vertical-offset-100{
+    padding-top:100px;
+}
+</style>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-  <c:url var="style" value="/resources/css/cart.css"></c:url>
-  <link rel="stylesheet" href="${style}"/>
-</head>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<title>Insert title here</title>
+		  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		  <%-- <c:url var="style" value="/resources/css/cart.css"></c:url>
+		  <link rel="stylesheet" href="${style}"/> --%>
+	</head>
 <body>
 <div id="cart">
  <div ng-app="app" ng-controller="ProductController">
@@ -62,4 +72,25 @@
  </div>
 </div>
 </body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 </html>
+<%@ include file="footer.jsp"%>
