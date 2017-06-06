@@ -24,14 +24,11 @@
 		  <link rel="stylesheet" href="${style}"/> --%>
 	</head>
 <body>
-<div id="cart">
+<div id="cart" align="center">
  <div ng-app="app" ng-controller="ProductController">
    <div ng-init="getCart(${cartId})">
    
-    <button class="left" ng-click="clearCart()">ClearCart</button>
    
-   <c:url value="/order/${cartId}" var="check"></c:url>
-   <a href="${check }" class="right">CheckOut</a>
   
       <table class="ance">
         <thead>
@@ -67,6 +64,10 @@
       <p>Discount,shipping and tax will be calculated in checkout.</p>
      </div>
    </div>
+    <button class="left" ng-click="clearCart()">ClearCart</button>
+   
+   <c:url value="/order/${cartId}" var="check"></c:url>
+   <a href="${check }" class="right">CheckOut</a>
 <c:url var="script7" value="/resources/js/controller.js"></c:url>
 <script src="${script7}"></script> 
  </div>

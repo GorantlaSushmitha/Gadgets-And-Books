@@ -8,31 +8,17 @@
 <title>Insert title here</title>
 </head>
 <style>
-    body{
-       margin-top:20%;
-    }
-    h1,a{
-      text-transform:uppercase;
-       font-weight:bold;
-       font-size:35px;
-    }
-    a{
-      font-size:25px;
-      color:red;
-      text-align:center;
-      text-decoration:none;
-      font-weight:bold;
-    }
-    a:hover{
-      font-size:28px;
-        text-decoration:none;
-        color:red;
+ body {
+        background-color: #444;
+        background: url(http://www.designbolts.com/wp-content/uploads/2013/02/Rough-Grey-Tilable-Pattern-For-Website-Background.jpg);
+        
     }
 </style>
 <body>
-
+<center>
 <h1>Your Cart is empty!!!</h1>
-<a href="<c:url value="/all/product/getallproducts"></c:url>">SHOP NOW</a>
+<a href="<c:url value="/all/product/productlist"></c:url>">SHOP NOW</a>
+</center>
 </body>
 </html>	
 <%@ include file="/WEB-INF/Pages/footer.jsp" %>
