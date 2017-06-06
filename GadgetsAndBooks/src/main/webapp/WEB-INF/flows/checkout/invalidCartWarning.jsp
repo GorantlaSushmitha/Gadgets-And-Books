@@ -15,10 +15,32 @@
     }
 </style>
 <body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <center>
 <h1>Your Cart is empty!!!</h1>
 <a href="<c:url value="/all/product/productlist"></c:url>">SHOP NOW</a>
 </center>
 </body>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 </html>	
 <%@ include file="/WEB-INF/Pages/footer.jsp" %>
