@@ -44,7 +44,7 @@
        <tr data-ng-repeat="ca in cart.cartItems">
        <td>
        <c:url var="sr" value="/all/product/image/{{ca.product.id}}"></c:url>
-  <img src="${sr }" height="150px" width="150px"/>
+  <img src="${sr }" height="200px" width="200px"/>
        
        </td>
          <td id="item">{{ca.product.name}}</td>

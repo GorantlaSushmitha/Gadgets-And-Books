@@ -6,7 +6,7 @@ app.controller("ProductController",function($scope,$http){
 	
 	$scope.addToCart = function(productId){
 		console.log("cart");
-		$http.put('http://localhost:8080/GadgetsAndBooks/cart/addCartItem/'+productId).success(function(){
+		$http.put('http://localhost:8181/GadgetsAndBooks/cart/addCartItem/'+productId).success(function(){
 			console.log("cart1");
 			alert("Product sucessfully added to the cart");
 		});
@@ -14,20 +14,20 @@ app.controller("ProductController",function($scope,$http){
   
 	$scope.getCart=function(cartId){
 		$scope.cartId = cartId;
-		$http.get('http://localhost:8080/GadgetsAndBooks/cart/getCart/'+cartId).success(function(data){
+		$http.get('http://localhost:8181/GadgetsAndBooks/cart/getCart/'+cartId).success(function(data){
 			$scope.cart=data;
 	
 		});
 	}
   $scope.removeFromCart=function(cartItemId){
 	  
-	  $http.put('http://localhost:8080/GadgetsAndBooks/cart/removeCartItem/'+cartItemId).success(function(){
+	  $http.put('http://localhost:8181/GadgetsAndBooks/cart/removeCartItem/'+cartItemId).success(function(){
 		  $scope.getCart($scope.cartId);
 	  });
   }
   $scope.clearCart=function(){
 	
-	 $http.put('http://localhost:8080/GadgetsAndBooks/cart/removeAllCartItems/'+$scope.cartId).success(function(){
+	 $http.put('http://localhost:8181/GadgetsAndBooks/cart/removeAllCartItems/'+$scope.cartId).success(function(){
 		 $scope.getCart($scope.cartId);
 	 })
   }
@@ -42,7 +42,7 @@ app.controller("ProductController",function($scope,$http){
  
   $scope.check=function(productId){
 	   var quantity = this.quant;
-     $http.put('http://localhost:8080/GadgetsAndBooks/cart/updatequan/'+productId+'/'+quantity).success(function(){
+     $http.put('http://localhost:8181/GadgetsAndBooks/cart/updatequan/'+productId+'/'+quantity).success(function(){
     	 $scope.getCart($scope.cartId);
      });
   }

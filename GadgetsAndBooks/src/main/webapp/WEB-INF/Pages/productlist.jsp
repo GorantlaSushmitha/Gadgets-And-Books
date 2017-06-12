@@ -34,7 +34,7 @@
 							<div class="form-group">
 								<center><i><b>Image:</b></i>
 								<url:url value="/resources/images/${p.id }.png" var="url3"></url:url>
-								<img src="${url3 }" height="100" width="100" ></center>
+								<img src="${url3 }" height="200" width="200" ></center>
 							</div>
 							<div class="form-group">
 								<center><i><b>Product Name</b></i>
