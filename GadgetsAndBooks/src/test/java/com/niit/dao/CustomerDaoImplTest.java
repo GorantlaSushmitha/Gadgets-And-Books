@@ -26,32 +26,32 @@ public class CustomerDaoImplTest
 	@Test
 	public void testSaveCustomer() {
 		Customer customer=new Customer();
-		customer.setFirstname("james");
-		customer.setLastname("smith");
+		customer.setFirstname("abc");
+		customer.setLastname("g");
 		customer.setEmail("j.s@abc.com");
-		customer.setPhone("0987654312");
+		customer.setPhone("513254312");
 		
 		BillingAddress billingAddress=new BillingAddress();
-		billingAddress.setStreetName("abc");
+		billingAddress.setStreetName("xyz");
 		billingAddress.setApartmentnumber("123");
-		billingAddress.setCity("chennai");
+		billingAddress.setCity("hyd");
 		billingAddress.setCountry("India");
-		billingAddress.setZipcode("600010");
+		billingAddress.setZipcode("500014");
 		
 		ShippingAddress shippingAddress=new ShippingAddress();
-		shippingAddress.setStreetName("abc");
+		shippingAddress.setStreetName("xyz");
 		shippingAddress.setApartmentNumber("123");
-		shippingAddress.setCity("chennai");
+		shippingAddress.setCity("hyd");
 		shippingAddress.setCountry("India");
-		shippingAddress.setZipcode("600010");
+		shippingAddress.setZipcode("500014");
 		
 		Users users=new Users();
-		users.setUsername("james");
+		users.setUsername("mnb");
 		users.setPassword("123");
 		users.setEnabled(true);
 		
 		Authorities authorities=new Authorities();
-		authorities.setUsername("james");
+		authorities.setUsername("mnb");
 		authorities.setRole("ROLE_USER");
 		
 		Cart cart=new Cart();

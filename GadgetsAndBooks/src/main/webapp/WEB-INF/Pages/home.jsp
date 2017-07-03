@@ -75,6 +75,7 @@
 					<tr align="center">
 						<td><img src="resources/images/38.png" class="img-thumbnail" alt="Cinque Terre" style="width: 300px;height: 300px"></td>
 						<td><img src="resources/images/40.png" class="img-thumbnail" alt="Cinque Terre" style="width: 300px;height: 300px"></td>
+						<td><img src="resources/images/41.png" class="img-thumbnail" alt="Cinque Terre" style="width: 300px;height: 300px"></td>
 					</tr>
 					<tr><td></td></tr>
 				</table>

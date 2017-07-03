@@ -57,7 +57,7 @@
        </tr>
        
       </table>
-   <div id="totalprice"> 
+   <div id="totalprice">
       <span id="sub">SubTotal: INR {{calculateGrandTotal()}}</span>
       </div>
       <div id="content">
